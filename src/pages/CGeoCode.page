@@ -1,0 +1,69 @@
+<apex:page controller="CGeoCode" action="{!init}" sidebar="False" tabStyle="GeoCode__tab"> 
+    <script src="http://maps.google.com/maps?file=api&v=2&key={!GKey}" type="text/javascript"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <apex:includeScript value="/soap/ajax/17.0/connection.js"/>
+    
+    <apex:SectionHeader title="Locating Contacts... Don't close this window." subtitle="Geo Coding">
+        <apex:outputPanel id="map_div" layout="block" style="width:575px; height:315px; border:thin solid #236FBD ;"></apex:outputPanel>
+    </apex:SectionHeader>
+
+ 
+    <apex:form >
+        <apex:actionFunction name="result" action="{!result}" reRender="outer">
+            <apex:param name="Lat" value="" />
+            <apex:param name="Lon" value="" />
+            <apex:param name="Stat" value="" /> 
+            <apex:param name="Acc" value="" />
+        </apex:actionFunction>  
+        <apex:actionFunction name="doneMsg" action="{!done}"> </apex:actionFunction>
+    </apex:form>
+    
+<apex:outputpanel id="outer" > 
+    <script type="text/javascript">
+        /*Initialize the Map and Geocoder*/
+        var geocoder = null;
+        var map = null;
+        map = new GMap2(document.getElementById('{!$Component.map_div}'));
+        geocoder = new GClientGeocoder();
+        map.setCenter(new GLatLng(37.4419, -122.1419), 1);
+        
+        
+        /*If I have a value keep going*/ 
+        if('{!continue}' == 'T'){
+         if (geocoder) {
+            setTimeout("1+1",650);
+            geocoder.getLocations( '{! JSENCODE(Address) }',
+                function(response) {
+                    map.clearOverlays();
+                    
+                   //if it was located, with a good accuracy
+                   if(response.Status.code == G_GEO_SUCCESS)
+                   {
+                        var place = response.Placemark[0];
+                        var accuracy = place.AddressDetails.Accuracy;
+                       
+                       if(accuracy>=6){
+                         var point = new GLatLng(place.Point.coordinates[1],place.Point.coordinates[0]);
+                         var marker = new GMarker(point);
+                         map.setCenter(point, 13);
+                         map.addOverlay(marker);
+                         marker.openInfoWindowHtml('{!JSENCODE(LName) }');
+                        }
+                        result(place.Point.coordinates[1],place.Point.coordinates[0],response.Status.code,place.AddressDetails.Accuracy);
+                   }
+                   else{
+                    result('0.0','0.0',response.Status.code,'0.0');
+                   }
+               }
+           );
+       }
+    }
+    else{
+        doneMsg();
+    }   
+    </script> 
+
+</apex:outputpanel>
+
+
+</apex:page>

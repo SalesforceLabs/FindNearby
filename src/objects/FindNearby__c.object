@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Accounts__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you want Accounts located and displayed on a map?</inlineHelpText>
+        <label>Accounts</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Accuracy__c</fullName>
+        <defaultValue>7</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>How Accurate do you require the Geolocation to be? 
+
+The Higher the number, the higher the quality threshold on Addresses. 
+
+Values should only be:(1-9)  Recommend 7.
+
+1 - Country 
+4 - Postal Code
+9 - Specific Building</inlineHelpText>
+        <label>Accuracy</label>
+        <precision>2</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contacts__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you want Contacts located and displayed on a map?</inlineHelpText>
+        <label>Contacts</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GKey__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>GKey</label>
+        <length>100</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>How_Many__c</fullName>
+        <defaultValue>15</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>How many records of each type can show up on a map at any one time. (1-200 recommended)</inlineHelpText>
+        <label>How Many</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Leads__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you want Leads to be located and displayed on the maps?</inlineHelpText>
+        <label>Leads</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>FindNearbySettings</label>
+</CustomObject>

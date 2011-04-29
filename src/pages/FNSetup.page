@@ -1,0 +1,48 @@
+<apex:page >
+<b>"Find Nearby"</b> Setup Guide <br/><br/>
+
+<b>Step 1 - Setup your Google Key</b><br/>
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/zfc9dNgDRe8&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/zfc9dNgDRe8&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+<br/>
+<a href='http://code.google.com/apis/maps/signup.html' target='_blank'>Google Maps Key</a>
+<br/>
+<br/>
+<br/>
+<b>Step 2 - Choose your settings</b><br/>
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/Ygh7NpEJIDM&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/Ygh7NpEJIDM&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+<br/>
+<br/>
+<b>How Many</b> - What is the maximum number of records per object you'd like on a map? <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Example:</b> 30, would display no more than 30 Accounts and 30 Contacts and 30 Leads on any one map.
+<br/>
+<br/>
+<b>Leads,Accounts,Contacts</b> - Do you want to map Leads/Accounts/Contacts. These are global settings. 
+<br/>
+<br/>
+<b>Accuracy</b> - How "sure" of the address do you need Google to be? <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Example:</b> 1= Country, 5 = Postal Code, 9= Building<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you find yourself with a lot of "Problems with Address" errors, try relaxing your Accuracy setting.
+<br/>
+<br/>
+<b>GKey</b> - This is your Google generated key. You need this to use their services. Step 1 guides you through this. 
+<br/><br/><br/><br/>
+<b> Step 3 - Add Fields</b><br/>
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/4yvRCcx-ZZg&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/4yvRCcx-ZZg&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add the installed fields onto your page layouts.  There are fields to add to Leads, Accounts and Contacts.<br/>
+<br/><br/><br/><br/>
+<b>Step 4 - List Views</b><br/> 
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/A7ffHuDBgGA&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/A7ffHuDBgGA&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+<br/><br/>
+<b>Setup->Customize->(Lead/Account/Contact)->Search Layouts->(Lead/Account/Contact) List View</b>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add the Map Leads button to the "Select Buttons" list.
+<br/><br/><br/><br/><br/>
+<b>Demo 1</b><br/>
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/g_t8z8Ubinw&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/g_t8z8Ubinw&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+<br/><br/><br/>
+<b>Demo 2</b><br/>
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/bQPCoWnraxI&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/bQPCoWnraxI&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+<br/><br/><br/>
+
+
+
+</apex:page>
