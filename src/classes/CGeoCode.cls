@@ -54,8 +54,8 @@ public with sharing class CGeoCode {
         Boolean doIDoThis = false; 
         
         try{
-            FN__FindNearby__c FNA = FN__FindNearby__c.getOrgDefaults();
-            doIDoThis = FNA.FN__Contacts__c;
+            FindNearby__c FNA = FindNearby__c.getOrgDefaults();
+            doIDoThis = FNA.Contacts__c;
         }catch(Exception e){
             doIDoThis = false;
         }

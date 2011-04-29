@@ -192,8 +192,8 @@ public with sharing class MapUtility {
     
     public static Integer getObjectLimit(){
         try{
-        FN__FindNearby__c FNA = FN__FindNearby__c.getOrgDefaults();
-        String num = FNA.FN__How_Many__c + ' ';
+        FindNearby__c FNA = FindNearby__c.getOrgDefaults();
+        String num = FNA.How_Many__c + ' ';
         
         Integer k = num.IndexOf('.');
         
@@ -211,8 +211,8 @@ public with sharing class MapUtility {
     public static Decimal getAccuracy(){
         Decimal num=6;
         try{
-            FN__FindNearby__c FNA = FN__FindNearby__c.getOrgDefaults();
-            num = FNA.FN__Accuracy__c;
+            FindNearby__c FNA = FindNearby__c.getOrgDefaults();
+            num = FNA.Accuracy__c;
         }catch(Exception e){return 6;}
         
         if(num < 1){ num = 1;}

@@ -3,7 +3,6 @@
     <fields>
         <fullName>Do_Not_Map__c</fullName>
         <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Do Not Map</label>
         <trackFeedHistory>false</trackFeedHistory>
@@ -11,9 +10,8 @@
     </fields>
     <fields>
         <fullName>Find_Nearby__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF( ISPICKVAL(Mapping_Status__c , &apos;Located&apos;),  HYPERLINK( &quot;apex/FN__FindNearbymap?aid=null&amp;lid=&quot; &amp; Id,&quot;Map it!&quot;,&quot;_parent&quot;) ,   HYPERLINK( &quot;apex/FN__LGeoCode?id=&quot; &amp; Id,&quot;Locate Lead&quot;,&quot;_parent&quot;) )</formula>
+        <formula>IF( ISPICKVAL(Mapping_Status__c , &apos;Located&apos;),  HYPERLINK( &quot;apex/FindNearbymap?aid=null&amp;lid=&quot; &amp; Id,&quot;Map it!&quot;,&quot;_parent&quot;) ,   HYPERLINK( &quot;apex/LGeoCode?id=&quot; &amp; Id,&quot;Locate Lead&quot;,&quot;_parent&quot;) )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Find Nearby</label>
         <required>false</required>
@@ -22,7 +20,6 @@
     </fields>
     <fields>
         <fullName>Lat__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Latitude</label>
         <precision>7</precision>
@@ -34,7 +31,6 @@
     </fields>
     <fields>
         <fullName>Lon__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Longitude</label>
         <precision>7</precision>
@@ -46,7 +42,6 @@
     </fields>
     <fields>
         <fullName>Mapping_Status__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Mapping Status</label>
         <picklist>
@@ -78,6 +73,6 @@
         <requireRowSelection>true</requireRowSelection>
         <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
 var selecteditems={!GETRECORDIDS($ObjectType.Account)}; 
-window.location= &quot;/apex/FN__FindNearbymap?llids=&quot;+selecteditems;</url>
+window.location= &quot;/apex/FindNearbymap?llids=&quot;+selecteditems;</url>
     </webLinks>
 </CustomObject>

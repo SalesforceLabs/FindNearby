@@ -57,8 +57,8 @@ public with sharing class LGeoCode {
     public pageReference init(){
         Boolean doIDoThis=false;
         try{    
-            FN__FindNearby__c FNA = FN__FindNearby__c.getOrgDefaults();
-            doIDoThis = FNA.FN__Leads__c;
+            FindNearby__c FNA = FindNearby__c.getOrgDefaults();
+            doIDoThis = FNA.Leads__c;
         }catch(Exception e){
             doIDoThis = false;
         }

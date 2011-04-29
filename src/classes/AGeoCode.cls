@@ -60,8 +60,8 @@ public with sharing class AGeoCode {
         Boolean doIDoThis = false; 
         try{
             
-            FN__FindNearby__c FNA = FN__FindNearby__c.getOrgDefaults();
-            doIDoThis = FNA.FN__Accounts__c;
+            FindNearby__c FNA = FindNearby__c.getOrgDefaults();
+            doIDoThis = FNA.Accounts__c;
         }catch(Exception e){doIDoThis = false;}
         
         if(!doIDoThis){
