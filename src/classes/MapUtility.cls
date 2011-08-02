@@ -62,7 +62,8 @@ public with sharing class MapUtility {
     public static String ContactToPlot  = ' where (Mapping_Status__c != \'Located\' and Mapping_Status__c != \'Problem With Address\') '+ 
                                         'and Mapping_Address__c != \'Do Not Map\' ';
                                          
-    public static String singleLimit = ' Limit 1 ';
+    public static String singleLimit = ' Limit 100 ';
+    
     //public static String ObjectLimit = ' Limit 150';
         
     
@@ -75,7 +76,7 @@ public with sharing class MapUtility {
         If I can't find anything - return null; 
     */
     public static Lead getSingleLeadToPlot(String id){
-        Lead l; 
+        Lead l;  
          try{
             if(id != null)
             {
@@ -99,6 +100,23 @@ public with sharing class MapUtility {
          }
          return l; 
     }
+    
+    //RSC trying with 100. since 1x1 is expensive.
+    public static List<Lead> getLeadsToPlot(){
+        List<Lead> l; 
+         try{
+                l = [ Select OwnerId, Do_Not_Map__c, Mapping_Status__c, Lat__c, Lon__c, Phone,Status,Industry, PostalCode, State, Street, City, Country, Name,Owner.Name 
+                        from Lead
+                        where (Mapping_Status__c != 'Located' and Mapping_Status__c != 'Problem with Address' and isConverted = false and Do_Not_Map__c = false) 
+                        limit 100
+                    ];
+               
+            }
+         catch(Exception e){
+                 l = null;
+         }
+         return l; 
+    }    
 
     /*
     I will specifically find leads that NEED TO BE GEOLOCATED

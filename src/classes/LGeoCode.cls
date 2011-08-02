@@ -34,6 +34,8 @@ public with sharing class LGeoCode {
      
     public Lead l; 
     
+    public List<Lead> leadsToPlot;
+    
     public String getGKey(){ 
         try{
         findNearby__c settings = findNearby__c.getInstance();
@@ -70,18 +72,44 @@ public with sharing class LGeoCode {
         return null;
     }
     
+    //refactored as an exmple on 2011-08-01
+    //instead of querying for one at a time (but still allowing for it)
+    //query into a collection, then cycle through those.
     public String getAddress(){ 
+        //do we have any existing leads to plot?
+        if (leadsToPlot == null || leadsToPlot.size() == 0) {
+        	//are we trying to plot a specific lead?
+        	String id = ApexPages.currentPage().getParameters().get('id');
+        	if (id != null) {
+        		Lead l = MapUtility.getSingleLeadToPlot(id);
+        		leadsToPlot = new List<Lead>();
+        		leadsToPlot.add(l);
+        	} else {
+	        	//go get some more
+	        	leadsToPlot = MapUtility.getLeadsToPlot();
+        	}
+        	//did we get any or are we done?
+        	if (leadsToPlot == null || leadsToPlot.size() == 0) {
+        		//nothing here -- return placeholder
+        		return '-';
+        	}
+        } 
+        //ok we have some leads in the list to plot.
+        //take the last lead out.
+        Lead lastLead = leadsToPlot.get(leadsToPlot.size()-1);
+        leadsToPlot.remove(leadsToPlot.size() -1);
+        
         
         //Reset the values
         //-----------------
         setContinue(false);
         Address = '-';
-        l = new Lead();
+        l = null;
         //-----------------
         
-        String id = ApexPages.currentPage().getParameters().get('id'); 
-        
-        l = MapUtility.getSingleLeadToPlot(id);
+        //handled above. String id = ApexPages.currentPage().getParameters().get('id'); 
+        //assign lastLead to L, the variable that's managing all this for us.
+        l = lastLead;
         problem = false; 
         if(l != null ){
             setContinue(true);
