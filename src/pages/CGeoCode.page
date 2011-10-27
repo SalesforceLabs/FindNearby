@@ -30,7 +30,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <apex:includeScript value="/soap/ajax/17.0/connection.js"/>
     
-    <apex:SectionHeader title="Locating Contacts... Don't close this window." subtitle="Geo Coding">
+    <apex:SectionHeader title="{!$Label.LocatingContactsDon_tClosThisWindow}" subtitle="{!$Label.GeoCoding}">
         <apex:outputPanel id="map_div" layout="block" style="width:575px; height:315px; border:thin solid #236FBD ;"></apex:outputPanel>
     </apex:SectionHeader>
 

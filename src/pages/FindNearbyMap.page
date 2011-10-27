@@ -96,10 +96,10 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
     color: #FF0000;
   }
 </style>
-<apex:form ><apex:commandLink action="{!goBackToRecord}" value="&lt;&lt; Back to {! JSENCODE(StartingPoint.rName)}" /></apex:form>
+<apex:form ><apex:commandLink action="{!goBackToRecord}" value="&lt;&lt; {!$Label.BackTo} {! JSENCODE(StartingPoint.rName)}" /></apex:form>
 <apex:form >
 <apex:outputPanel rendered="{!needFilters}"> 
-    <div style="text-align:right;"><span >&nbsp;<a class="Filter" onclick="jQuery('#filterDiv').slideToggle('slow');" href="javascript:%20void%280%29%3B">Filters</a>&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div style="text-align:right;"><span >&nbsp;<a class="Filter" onclick="jQuery('#filterDiv').slideToggle('slow');" href="javascript:%20void%280%29%3B">{!$Label.Filters}</a>&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
     <div id="filterDiv">
         <table class="Filter" border="0" cellspacing="0" cellpadding="0" width="100%">
             <tr class="FilterItem" > 
@@ -109,7 +109,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
                             <td >
                                 <img src='{!URLFOR($Resource.LeadIcon)}' />
                             </td>
-                            <td>Leads</td>
+                            <td>{!$Label.Leads}</td>
                             <td align='left'>
                                 <apex:inputCheckbox value="{!searchLeads}" disabled="{! !LeadsAvailable}"/>
                             </td>
@@ -117,7 +117,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
                             <td >
                                 <img src='{!URLFOR($Resource.AccountIcon)}' /><br/>
                             </td>
-                            <td>Accounts</td>
+                            <td>{!$Label.Accounts}</td>
                             <td align='left'>
                                 <apex:inputCheckbox value="{!searchAccounts}" disabled="{! !AccountsAvailable}"/><br/>
                             </td >
@@ -126,7 +126,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
                                 <img src='{!URLFOR($Resource.Distance)}' width="30px" /><br/>
                             </td>
                             <td >
-                                Distance        
+                                {!$Label.Distance}        
                             </td>
                             <td align='left'>
                                 <apex:selectList value="{!Distance}" multiselect="false" size="1"><apex:selectOptions value="{!Distances}"/></apex:selectList>
@@ -136,19 +136,19 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
                             <td >
                                 <img src='{!URLFOR($Resource.ContactIcon)}' /><br/>
                             </td>
-                            <td>Contacts</td>
+                            <td>{!$Label.Contacts}</td>
                             <td align='left'>
                                 <apex:inputCheckbox value="{!searchContacts}" disabled="{! !ContactsAvailable}"/><br/>
                             </td>
                             <td><img src='{!URLFOR($Resource.MyRecords)}' /></td>
                             <td >
-                                My Records
+                                {!$Label.My_Records}
                             </td>
                             <td align='left'>
                                 <apex:inputCheckbox value="{!OnlyMyRecords}"/>
                             </td>
                             <td align="right" colspan="4"> 
-                                 <apex:commandButton action="{!Search}" value="Filter" />
+                                 <apex:commandButton action="{!Search}" value="{!$Label.Filter}" />
                             </td>
                          </tr>
                         <tr height="25px"></tr>
@@ -160,7 +160,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
                     <table>
                         <tr>
                             <td valign="top" align="left">
-                                Industries      
+                                {!$Label.Industries}      
                             </td>
                         </tr>
                         <tr>
@@ -175,7 +175,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
                     <table>
                         <tr>
                             <td valign="top" align="left">
-                              Account Types  
+                              {!$Label.AccountTypes}  
                             </td>
                         </tr>
                         <tr>
@@ -191,7 +191,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
                     <table>
                         <tr>
                             <td valign="top" align="left">
-                                Lead Status
+                                {!$Label.LeadStatus}
                             </td>
                         </tr>
                         </tr>
