@@ -18,7 +18,7 @@ trigger FindNearby_2010_Lead_Tidy on Lead (before update) {
           Trigger.new[k].Lat__c = null;
             Trigger.new[k].Lon__c = null;
         }
-        // Added code to make Do Not Map checkbox work
+        // Added code to make Do Not Map checkbox work 
         if(Trigger.new[k].Do_Not_Map__c == true)
         {
         	reset = true;

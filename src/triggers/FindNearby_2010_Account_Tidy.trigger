@@ -34,7 +34,7 @@ trigger FindNearby_2010_Account_Tidy on Account (before update) {
         		Trigger.new[k].Which_Address__c = 'Do Not Map';
         		reset=true;
         	}
-        // End edit
+        // End edit 
         else{
         	Trigger.new[k].Which_Address__c = 'Billing';
         	reset = true;         	

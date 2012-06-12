@@ -27,7 +27,7 @@ trigger FindNearby_2010_Contact_Tidy on Contact (before update) {
                   reset = true;  
             }
         }
-        // Added else if below to make Do Not Map selection able to be saved
+        // Added else if below to make Do Not Map selection able to be saved 
          else if (Trigger.new[k].Mapping_Address__c == 'Do Not Map')
         	{
         		Trigger.new[k].Mapping_Address__c = 'Do Not Map';
