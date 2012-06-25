@@ -1,31 +1,3 @@
-/*
-Copyright (c) 2011, salesforce.com, Inc.
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, 
-are permitted provided that the following conditions are met:
-
-    * Redistributions of source code must retain the above copyright notice, 
-    this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright notice, 
-    this list of conditions and the following disclaimer in the documentation 
-    and/or other materials provided with the distribution.
-    * Neither the name of the salesforce.com, Inc. nor the names of its contributors 
-    may be used to endorse or promote products derived from this software 
-    without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
-INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
-BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE 
-OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
-OF THE POSSIBILITY OF SUCH DAMAGE.
-
-*/
 public with sharing class MapUtility {
     
     Map<String, String> errors = new Map<String, String> {'200' => 'Located', '610' => 'Bad Google Maps Key', 
@@ -62,8 +34,7 @@ public with sharing class MapUtility {
     public static String ContactToPlot  = ' where (Mapping_Status__c != \'Located\' and Mapping_Status__c != \'Problem With Address\') '+ 
                                         'and Mapping_Address__c != \'Do Not Map\' ';
                                          
-    public static String singleLimit = ' Limit 100 ';
-    
+    public static String singleLimit = ' Limit 1 ';
     //public static String ObjectLimit = ' Limit 150';
         
     
@@ -76,7 +47,7 @@ public with sharing class MapUtility {
         If I can't find anything - return null; 
     */
     public static Lead getSingleLeadToPlot(String id){
-        Lead l;  
+        Lead l; 
          try{
             if(id != null)
             {
@@ -100,23 +71,6 @@ public with sharing class MapUtility {
          }
          return l; 
     }
-    
-    //RSC trying with 100. since 1x1 is expensive.
-    public static List<Lead> getLeadsToPlot(){
-        List<Lead> l; 
-         try{
-                l = [ Select OwnerId, Do_Not_Map__c, Mapping_Status__c, Lat__c, Lon__c, Phone,Status,Industry, PostalCode, State, Street, City, Country, Name,Owner.Name 
-                        from Lead
-                        where (Mapping_Status__c != 'Located' and Mapping_Status__c != 'Problem with Address' and isConverted = false and Do_Not_Map__c = false) 
-                        limit 100
-                    ];
-               
-            }
-         catch(Exception e){
-                 l = null;
-         }
-         return l; 
-    }    
 
     /*
     I will specifically find leads that NEED TO BE GEOLOCATED
@@ -210,8 +164,8 @@ public with sharing class MapUtility {
     
     public static Integer getObjectLimit(){
         try{
-        FindNearby__c FNA = FindNearby__c.getOrgDefaults();
-        String num = FNA.How_Many__c + ' ';
+        FN__FindNearby__c FNA = FN__FindNearby__c.getOrgDefaults();
+        String num = FNA.FN__How_Many__c + ' ';
         
         Integer k = num.IndexOf('.');
         
@@ -229,8 +183,8 @@ public with sharing class MapUtility {
     public static Decimal getAccuracy(){
         Decimal num=6;
         try{
-            FindNearby__c FNA = FindNearby__c.getOrgDefaults();
-            num = FNA.Accuracy__c;
+            FN__FindNearby__c FNA = FN__FindNearby__c.getOrgDefaults();
+            num = FNA.FN__Accuracy__c;
         }catch(Exception e){return 6;}
         
         if(num < 1){ num = 1;}
