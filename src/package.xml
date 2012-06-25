@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Find Nearby</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <idMappings>
+        <developerEntityId>01ZA0000000DQYf</developerEntityId>
+        <developerName>Find_Nearby_info/Find_Nearby_dash</developerName>
+    </idMappings>
+    <idMappings>
+        <developerEntityId>00bA0000000Og7W</developerEntityId>
+        <developerName>Contact.Map_Contacts</developerName>
+    </idMappings>
+    <idMappings>
+        <developerEntityId>00bA0000000Og7R</developerEntityId>
+        <developerName>Lead.Map_Leads</developerName>
+    </idMappings>
+    <idMappings>
+        <developerEntityId>00bA0000000Oe4O</developerEntityId>
+        <developerName>Account.Map_Accounts</developerName>
+    </idMappings>
+    <idMappings>
+        <developerEntityId>00OA0000002fSA2</developerEntityId>
+        <developerName>Find_Nearby/Mapping_Status_Leads</developerName>
+    </idMappings>
+    <idMappings>
+        <developerEntityId>00OA0000002fS9d</developerEntityId>
+        <developerName>Find_Nearby/Which_Address_Contacts</developerName>
+    </idMappings>
+    <idMappings>
+        <developerEntityId>00OA0000002fS9T</developerEntityId>
+        <developerName>Find_Nearby/Mapping_Status_Contacts</developerName>
+    </idMappings>
+    <idMappings>
+        <developerEntityId>00OA0000002fS9O</developerEntityId>
+        <developerName>Find_Nearby/Mapping_Status_Accounts</developerName>
+    </idMappings>
+    <idMappings>
+        <developerEntityId>00OA0000002fS9J</developerEntityId>
+        <developerName>Find_Nearby/Which_Address_Account</developerName>
+    </idMappings>
+    <namespacePrefix>FN</namespacePrefix>
     <types>
         <members>AGeoCode</members>
         <members>CGeoCode</members>
@@ -47,6 +86,12 @@
         <members>Contact.Lon__c</members>
         <members>Contact.Mapping_Address__c</members>
         <members>Contact.Mapping_Status__c</members>
+        <members>FindNearby__c.Accounts__c</members>
+        <members>FindNearby__c.Accuracy__c</members>
+        <members>FindNearby__c.Contacts__c</members>
+        <members>FindNearby__c.GKey__c</members>
+        <members>FindNearby__c.How_Many__c</members>
+        <members>FindNearby__c.Leads__c</members>
         <members>Lead.Do_Not_Map__c</members>
         <members>Lead.Find_Nearby__c</members>
         <members>Lead.Lat__c</members>
@@ -102,5 +147,5 @@
         <members>Lead.Map_Leads</members>
         <name>WebLink</name>
     </types>
-    <version>20.0</version>
+    <version>21.0</version>
 </Package>

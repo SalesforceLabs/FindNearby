@@ -1,31 +1,3 @@
-/*
-Copyright (c) 2011, salesforce.com, Inc.
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, 
-are permitted provided that the following conditions are met:
-
-    * Redistributions of source code must retain the above copyright notice, 
-    this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright notice, 
-    this list of conditions and the following disclaimer in the documentation 
-    and/or other materials provided with the distribution.
-    * Neither the name of the salesforce.com, Inc. nor the names of its contributors 
-    may be used to endorse or promote products derived from this software 
-    without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
-INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
-BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE 
-OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
-OF THE POSSIBILITY OF SUCH DAMAGE.
-
-*/
 public with sharing class LGeoCode {
     
     public String Address; 
@@ -33,8 +5,6 @@ public with sharing class LGeoCode {
     public Boolean Problem=false; 
      
     public Lead l; 
-    
-    public List<Lead> leadsToPlot;
     
     public String getGKey(){ 
         try{
@@ -59,8 +29,8 @@ public with sharing class LGeoCode {
     public pageReference init(){
         Boolean doIDoThis=false;
         try{    
-            FindNearby__c FNA = FindNearby__c.getOrgDefaults();
-            doIDoThis = FNA.Leads__c;
+            FN__FindNearby__c FNA = FN__FindNearby__c.getOrgDefaults();
+            doIDoThis = FNA.FN__Leads__c;
         }catch(Exception e){
             doIDoThis = false;
         }
@@ -72,44 +42,18 @@ public with sharing class LGeoCode {
         return null;
     }
     
-    //refactored as an exmple on 2011-08-01
-    //instead of querying for one at a time (but still allowing for it)
-    //query into a collection, then cycle through those.
     public String getAddress(){ 
-        //do we have any existing leads to plot?
-        if (leadsToPlot == null || leadsToPlot.size() == 0) {
-        	//are we trying to plot a specific lead?
-        	String id = ApexPages.currentPage().getParameters().get('id');
-        	if (id != null) {
-        		Lead l = MapUtility.getSingleLeadToPlot(id);
-        		leadsToPlot = new List<Lead>();
-        		leadsToPlot.add(l);
-        	} else {
-	        	//go get some more
-	        	leadsToPlot = MapUtility.getLeadsToPlot();
-        	}
-        	//did we get any or are we done?
-        	if (leadsToPlot == null || leadsToPlot.size() == 0) {
-        		//nothing here -- return placeholder
-        		return '-';
-        	}
-        } 
-        //ok we have some leads in the list to plot.
-        //take the last lead out.
-        Lead lastLead = leadsToPlot.get(leadsToPlot.size()-1);
-        leadsToPlot.remove(leadsToPlot.size() -1);
-        
         
         //Reset the values
         //-----------------
         setContinue(false);
         Address = '-';
-        l = null;
+        l = new Lead();
         //-----------------
         
-        //handled above. String id = ApexPages.currentPage().getParameters().get('id'); 
-        //assign lastLead to L, the variable that's managing all this for us.
-        l = lastLead;
+        String id = ApexPages.currentPage().getParameters().get('id'); 
+        
+        l = MapUtility.getSingleLeadToPlot(id);
         problem = false; 
         if(l != null ){
             setContinue(true);
