@@ -16,9 +16,9 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Latitude</label>
-        <precision>7</precision>
+        <precision>18</precision>
         <required>false</required>
-        <scale>2</scale>
+        <scale>14</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -28,9 +28,9 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Longitude</label>
-        <precision>7</precision>
+        <precision>18</precision>
         <required>false</required>
-        <scale>2</scale>
+        <scale>14</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Number</type>
         <unique>false</unique>
