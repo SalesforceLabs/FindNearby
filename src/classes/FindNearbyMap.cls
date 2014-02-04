@@ -462,7 +462,7 @@ public void setAccountTypeOptions(){
     Schema.DescribeFieldResult F = Account.Type.getDescribe();
     List<Schema.PicklistEntry> P = F.getPicklistValues();
 
-    AccountTypeOptions.add(new SelectOption('All','All'));
+    AccountTypeOptions.add(new SelectOption('All',system.label.All));
 
     for(integer k =0; k< P.size(); k++)
     {
@@ -502,7 +502,7 @@ public void setAccountIndustryOptions(){
     Schema.DescribeFieldResult F = Account.Industry.getDescribe();
     List<Schema.PicklistEntry> P = F.getPicklistValues();
 
-    AccountIndustryOptions.add(new SelectOption('All','All'));
+    AccountIndustryOptions.add(new SelectOption('All',system.label.All));
 
     for(integer k =0; k< P.size(); k++)
     {
@@ -535,7 +535,7 @@ public List<SelectOption> getLeadStatusOptions(){
         Schema.DescribeFieldResult F = Lead.Status.getDescribe();
         List<Schema.PicklistEntry> P = F.getPicklistValues();
     
-        items.add(new SelectOption('All','All'));
+        items.add(new SelectOption('All',system.label.All));
     
         for(integer k =0; k< P.size(); k++)
         {

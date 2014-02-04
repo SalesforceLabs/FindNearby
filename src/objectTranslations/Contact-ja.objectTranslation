@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>Find Nearby</label>
+        <name>Find_Nearby__c</name>
+    </fields>
+    <fields>
+        <label>言語</label>
+        <name>Languages__c</name>
+    </fields>
+    <fields>
+        <label>緯度</label>
+        <name>Lat__c</name>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>その他</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Referral</masterLabel>
+            <translation>パートナー紹介</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone Inquiry</masterLabel>
+            <translation>電話問い合わせ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased List</masterLabel>
+            <translation>購入リスト</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation>Web</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>レベル</label>
+        <name>Level__c</name>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation><!-- Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation><!-- Secondary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tertiary</masterLabel>
+            <translation><!-- Tertiary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>経度</label>
+        <name>Lon__c</name>
+    </fields>
+    <fields>
+        <help>取引先責任者のマッピングアドレス</help>
+        <label>マッピングアドレス</label>
+        <name>Mapping_Address__c</name>
+        <picklistValues>
+            <masterLabel>Do Not Map</masterLabel>
+            <translation>マッピングしない</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailing</masterLabel>
+            <translation>郵送先</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>その他</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>取引先責任者のマッピングステータス</help>
+        <label>マッピングステータス</label>
+        <name>Mapping_Status__c</name>
+        <picklistValues>
+            <masterLabel>Bad Google Key</masterLabel>
+            <translation>不明なGoogleKey</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Exhausted</masterLabel>
+            <translation>Googleのリソース不足</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Located</masterLabel>
+            <translation>マッピング済</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Located Yet</masterLabel>
+            <translation>未マッピング</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Problem with Address</masterLabel>
+            <translation>住所情報に問題有</translation>
+        </picklistValues>
+    </fields>
+    <webLinks>
+        <label>取引先責任者地図</label>
+        <name>Map_Contacts</name>
+    </webLinks>
+</CustomObjectTranslation>

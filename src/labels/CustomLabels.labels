@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AccountTypes</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AccountTypes</shortDescription>
+        <value>Account Types</value>
+    </labels>
+    <labels>
+        <fullName>Accounts</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Accounts</shortDescription>
+        <value>Accounts</value>
+    </labels>
+    <labels>
+        <fullName>Accounts30Contacts30Leads30OnAnyOneMap</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Accounts30Contacts30Leads30OnAnyOneMap</shortDescription>
+        <value>30, would display no more than 30 Accounts and 30 Contacts and 30 Leads on any one map.</value>
+    </labels>
+    <labels>
+        <fullName>Accuracy</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Accuracy</shortDescription>
+        <value>Accuracy</value>
+    </labels>
+    <labels>
+        <fullName>AddTheInstalledFields</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AddTheInstalledFields</shortDescription>
+        <value>Add the installed fields onto your page layouts.</value>
+    </labels>
+    <labels>
+        <fullName>AddTheMapLeadsButton</fullName>
+        <language>ja</language>
+        <protected>true</protected>
+        <shortDescription>AddTheMapLeadsButton</shortDescription>
+        <value>Add the Map Leads button to the &quot;Select Buttons&quot; list.</value>
+    </labels>
+    <labels>
+        <fullName>All</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>All</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>BackTo</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BackTo</shortDescription>
+        <value>Back to</value>
+    </labels>
+    <labels>
+        <fullName>Contacts</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Contacts</shortDescription>
+        <value>Contacts</value>
+    </labels>
+    <labels>
+        <fullName>Country1Postal5CodeBuilding9</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Country1Postal5CodeBuilding9</shortDescription>
+        <value>1= Country, 5 = Postal Code, 9= Building</value>
+    </labels>
+    <labels>
+        <fullName>Customize</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customize</shortDescription>
+        <value>Customize</value>
+    </labels>
+    <labels>
+        <fullName>Demo1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Demo1</shortDescription>
+        <value>Demo 1</value>
+    </labels>
+    <labels>
+        <fullName>Demo2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Demo2</shortDescription>
+        <value>Demo 2</value>
+    </labels>
+    <labels>
+        <fullName>Distance</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Distance</shortDescription>
+        <value>Distance</value>
+    </labels>
+    <labels>
+        <fullName>Example</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Example</shortDescription>
+        <value>Example</value>
+    </labels>
+    <labels>
+        <fullName>Filter</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>Filters</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filters</shortDescription>
+        <value>Filters</value>
+    </labels>
+    <labels>
+        <fullName>GKey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>GKey</shortDescription>
+        <value>GKey</value>
+    </labels>
+    <labels>
+        <fullName>GeoCoding</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>GeoCoding</shortDescription>
+        <value>Geo Coding</value>
+    </labels>
+    <labels>
+        <fullName>HowMany</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HowMany</shortDescription>
+        <value>How Many</value>
+    </labels>
+    <labels>
+        <fullName>HowSureOfTheAddress</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HowSureOfTheAddress</shortDescription>
+        <value>How &quot;sure&quot; of the address do you need Google to be?</value>
+    </labels>
+    <labels>
+        <fullName>Industries</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Industries</shortDescription>
+        <value>Industries</value>
+    </labels>
+    <labels>
+        <fullName>LeadStatus</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LeadStatus</shortDescription>
+        <value>Lead Status</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Account_Contact</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead_Account_Contact</shortDescription>
+        <value>Lead/Account/Contact</value>
+    </labels>
+    <labels>
+        <fullName>Leads</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Leads</shortDescription>
+        <value>Leads</value>
+    </labels>
+    <labels>
+        <fullName>Leads_Accounts_Contacts</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Leads_Accounts_Contacts</shortDescription>
+        <value>Leads,Accounts,Contacts</value>
+    </labels>
+    <labels>
+        <fullName>ListView</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ListView</shortDescription>
+        <value>List View</value>
+    </labels>
+    <labels>
+        <fullName>LocatingAccountsDon_tClosThisWindow</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LocatingAccountsDon&apos;tClosThisWindow</shortDescription>
+        <value>Locating Accounts... Don&apos;t close this window.</value>
+    </labels>
+    <labels>
+        <fullName>LocatingContactsDon_tClosThisWindow</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LocatingContactsDon&apos;tClosThisWindow</shortDescription>
+        <value>Locating Contacts... Don&apos;t close this window.</value>
+    </labels>
+    <labels>
+        <fullName>LocatingLeadsDon_tClosThisWindow</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LocatingLeadsDon&apos;tClosThisWindow</shortDescription>
+        <value>Locating Leads... Don&apos;t close this window.</value>
+    </labels>
+    <labels>
+        <fullName>MaximumNumberOf_Records</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MaximumNumberOf Records</shortDescription>
+        <value>What is the maximum number of records per object you&apos;d like on a map?</value>
+    </labels>
+    <labels>
+        <fullName>My_Records</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>My Records</shortDescription>
+        <value>My Records</value>
+    </labels>
+    <labels>
+        <fullName>ProblemsWithAddress</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProblemsWithAddress</shortDescription>
+        <value>If you find yourself with a lot of &quot;Problems with Address&quot; errors, try relaxing your Accuracy setting.</value>
+    </labels>
+    <labels>
+        <fullName>SearchLayouts</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SearchLayouts</shortDescription>
+        <value>Search Layouts</value>
+    </labels>
+    <labels>
+        <fullName>Setup</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Setup</shortDescription>
+        <value>Setup</value>
+    </labels>
+    <labels>
+        <fullName>SetupGuide</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SetupGuide</shortDescription>
+        <value>Setup Guide</value>
+    </labels>
+    <labels>
+        <fullName>Step1GuidesYouThroughThis</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Step1GuidesYouThroughThis</shortDescription>
+        <value>This is your Google generated key. You need this to use their services. Step 1 guides you through this.</value>
+    </labels>
+    <labels>
+        <fullName>Step1_SetupyourGoogleKey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Step1-SetupyourGoogleKey</shortDescription>
+        <value>Step 1 - Setup your Google Key</value>
+    </labels>
+    <labels>
+        <fullName>Step2_ChooseYourSettings</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Step2-ChooseYourSettings</shortDescription>
+        <value>Step 2 - Choose your settings</value>
+    </labels>
+    <labels>
+        <fullName>Step3AddFields</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Step3AddFields</shortDescription>
+        <value>Step 3 - Add Fields</value>
+    </labels>
+    <labels>
+        <fullName>Step4ListViews</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Step4ListViews</shortDescription>
+        <value>Step 4 - List Views</value>
+    </labels>
+    <labels>
+        <fullName>ThereAreFieldsToAddToLAC</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ThereAreFieldsToAddToLAC</shortDescription>
+        <value>There are fields to add to Leads, Accounts and Contacts.</value>
+    </labels>
+    <labels>
+        <fullName>TheseAreGlobalSettings</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TheseAreGlobalSettings</shortDescription>
+        <value>Do you want to map Leads/Accounts/Contacts. These are global settings.</value>
+    </labels>
+    <labels>
+        <fullName>ThisIsYourNewPage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ThisIsYourNewPage</shortDescription>
+        <value>This is your new Page</value>
+    </labels>
+    <labels>
+        <fullName>YouReDone</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>You&apos;re Done!</shortDescription>
+        <value>You&apos;re Done!</value>
+    </labels>
+</CustomLabels>
