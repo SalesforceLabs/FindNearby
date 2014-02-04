@@ -28,6 +28,13 @@ trigger FindNearby_2010_Account_Tidy on Account (before update) {
                   reset = true;  
             }
         }
+        // Added else if below to make Do Not Map selection able to be saved
+        else if (Trigger.new[k].Which_Address__c == 'Do Not Map')
+        	{
+        		Trigger.new[k].Which_Address__c = 'Do Not Map';
+        		reset=true;
+        	}
+        // End edit 
         else{
         	Trigger.new[k].Which_Address__c = 'Billing';
         	reset = true;         	
